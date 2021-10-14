@@ -4,9 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Recap</title>
 </head>
 <body>
-    
+   <div style="align-content: center;">
+        <header>
+        
+        <nav>
+           <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">services</a></li>
+              <li><a href="#">directions</a></li>
+              <li><a href="#">coupons</a></li>
+              <li><a href="#">orders</a></li>
+              <li><a href="#">reviews</a></li>
+           </ul>
+        </nav>
+        <img src="./assets/Survey.png" alt="Survey" width="300" height="300"/>
+        <article>
+           <h1>Customer Survey</h1>
+           <p>Thank you for taking our customer survey. Your response 
+              helps us maintain the tradition that has made 
+              us the top-rated service in the metro area.
+           </p>
+           
+           <p>Surveys are private and confidential. We will not share your contact information with third 
+              parties, <em>ever</em>.
+           </p>
+        </article>
+     </header>
+   </div>
+
+  <div style="background-color: lightblue; float: left;">
+      <section>
+     <p>Required values are marked by an asterisk (*)</p>
+      
+      <form id="survey" name="survey">
+       <fieldset id="custInfo">
+          <legend>Customer Information</legend>
+           <p>
+           <label for="custname">Name *</label>
+           <input name="custname" id="custname" placeholder="first and last name" required="required" />
+           </p>
+           <p>
+           <label for="street">Street address</label>
+           <input name="street" id="street" />
+           </p>
+           <p>
+           <label for="city">City</label>
+           <input name="city" id="city" />
+           </p>
+           <p>
+           <label for="state">State (abbr.)</label>
+           <input name="state" id="state" />
+           </p>
+           <p>
+           <label for="zip">Postal code</label>
+           <input name="zip" id="zip" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(\-\d{4})?$"/>
+           </p>
+           <p>
+           <label for="phone">Phone number</label>
+           <input name="phone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)d{3}[\s-]?\d{4}$" />
+           </p>
+           <p>
+           <label for="email">E-mail *</label>
+           <input name="email" id="email" type="email" required="required" />
+           </p>
+           <p>
+           <label>Where did you hear about us? <br />(select all that apply)</label>
+           <select name="infoSrc" id="infoSrc" size="5" multiple="multiple">
+               <option value="internet">Internet</option>
+               <option value="mag">Magazine</option>
+               <option value="news">Newspaper</option>
+               <option value="word">Word of Mouth</option>
+               <option value="other">Other</option>
+           </select>
+           </p>
+           <p>
+           <label for="favService">What's your favorite service?</label>
+           <input name="favService" id="favService" list="serviceType" />
+           <datalist id="serviceType">
+               <option value="Antivirus">
+               <option value="Computer Repair">
+               <option value="Installation">
+               <option value="Web Design">
+            </datalist>
+            </p>
+
+          </fieldset> 
+        </div>
+        <br />
+        <div style="background-color: lightblue; vertical-align: auto;">
+       <fieldset id="experience">
+           <legend>Share Your Experience with Jarrett Technology Group</legend>
+           
+           <label for="visitdate">Date of service</label>
+           <input name="servedate" id="servedate" type="date" />
+           
+           <label for="receipt">Receipt number *</label>
+           <input name="receipt" id="receipt" placeholder="re-nnnnnn" required="required" pattern="^re\-\d{6}$" />
+           
+       <label for="ordertype">Service type</label>
+           <select name="ordertype" id="ordertype">
+               <option value="type1">Internet</option>
+               <option value="type2">In-Person</option>
+               <option value="type3" selected="selected">Corporate</option>
+               <option value="type4">Personal</option>
+           </select>
+           <br />
+       <label>Was your service friendly?</label>
+           <fieldset class="optionGroup">
+               <label for="sYes">Yes</label>
+               <input type="radio" name="serviceFriendly" id="sYes" value="yes" />
+               
+               <label for="sNo">No</label>
+               <input type="radio" name="serviceFriendly" id="sNo" value="no" />
+           </fieldset>
+           
+       <label>Was your order correct?</label>
+           <fieldset class="optionGroup">
+               <label for="oYes">Yes</label>
+               <input type="radio" name="orderCorrect" id="oYes" value="yes" />
+               
+               <label for="oNo">No</label>
+               <input type="radio" name="orderCorrect" id="oNo" value="no" />
+           </fieldset>
+           
+           
+       <label>Rate the overall service<br />
+               (0 = poor; 10 = great)</label>
+           <label class="sliderLabel">0</label>
+           <input name="service" id="service" type="range" value="5"
+                  min="0" max="10" step="1" />
+           <label class="sliderLabel">10</label>
+           <br />
+           
+       
+           
+       <label for="comments ">Tell us more about your experience!</label>
+           <textarea name="comments" id="comments"></textarea>
+          </fieldset>
+       </div>
+
+          
+          <p>
+          <input type="submit" value="Submit My Survey" />
+           <input type="reset" value="Cancel" />
+          </p>
+        </p>
+      </form>
+  </section>
+<h3>Watch this video on Git for Professionals</h3>
+  <iframe width="1154" height="721" src="https://www.youtube.com/embed/Uszj_k0DGsg" title="YouTube video player" frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <footer style="float: right;">
+     <address>
+        Jarrett Technology Group &bull;
+        1234 Street Drive &bull;
+        Somewhere, USA &bull;
+        (555) 555 - 5555 
+     </address>
+  </footer>
 </body>
 </html>
